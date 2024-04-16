@@ -1,0 +1,272 @@
+avance grupal nro02 GRUPO#3
+integrantes: ashly gomez ,jade chambilla , dulce zurita 
+
+CREATE DATABADE JAD_M;
+CREATE TABLE JAD_M (
+	id_sede VARCHAR(10) PRIMARY KEY,
+	direccion_sede VARCHAR (50),
+	direccion_zonal VARCHAR (50),
+
+
+INSERT INTO JAD_M (id_sede,direccion_sede,direccion_zonal) 
+VALUES ('Ilo','Pampa Inalambrica','Moquegua-Tacna');
+VALUES ('MOQUEGUA','Pampa Inalambrica','Moquegua-Tacna');
+VALUES ('TACNA','Pampa Inalambrica','Moquegua-Tacna');
+VALUES ('PUNO','Pampa Inalambrica','Moquegua-Tacna');
+VALUES ('AREQUIPA','Pampa Inalambrica','Moquegua-Tacna');
+
+CREATE TABLE docente (
+	id_docente VARCHAR(10) PRIMARY KEY,
+	nom_docente VARCHAR (50),
+	apellidos_completo VARCHAR (50),
+	telefono VARCHAR (9),
+	sexo CHAR (1),
+	remuneracion NUMERIC(2,4),
+	f_nacimiento DATE,
+	dia DATE,
+	mes DATE,
+	anio DATE,
+	direccion VARCHAR(50),
+	nro_calle VARCHAR (10),
+	nom_calle VARCHAR (30),
+	provincia VARCHAR (20));
+
+INSERT INTO docente (id_docente,nom_docente,apellidos_completo,telefono,sexo,remuneracion,f_nacimiento,dia,mes,anio,direccion) 
+VALUES ('01','jade','chambilla','123456789','F',400,03,12,2003,'01','nuevo ilo','ilo');
+VALUES ('02','jade','chambilla','123456789','F',400,03,12,2003,'01','nuevo ilo','ilo');
+VALUES ('03','jade','chambilla','123456789','F',400,03,12,2003,'01','nuevo ilo','ilo');
+VALUES ('04','jade','chambilla','123456789','F',400,03,12,2003,'01','nuevo ilo','ilo');
+VALUES ('05','jade','chambilla','123456789','F',400,03,12,2003,'01','nuevo ilo','ilo');
+
+CREATE TABLE apoderado (
+	id_apode VARCHAR(10) PRIMARY KEY,
+	nom_apode VARCHAR (50),
+	apellidos_completo VARCHAR (50),
+	correo VARCHAR (50),
+	DNI VARCHAR (8),
+	telefono VARCHAR (9),
+	sexo CHAR (1),
+	remuneracion NUMERIC(2,4),
+	f_nacimiento DATE,
+	dia DATE,
+	mes DATE,
+	anio DATE,
+	direccion VARCHAR(50),
+	nro_calle VARCHAR (10),
+	nom_calle VARCHAR (30),
+	provincia VARCHAR (20));
+
+INSERT INTO docente (id_docente,nom_docente,apellidos_completo,correo,DNI,telefono,sexo,remuneracion,f_nacimiento,dia,mes,anio,direccion,nro_calle,nom_calle,provincia ) 
+VALUES ('01','jade','chambilla','jade@','74020292','123456789','F',400,03,12,2003,'01','nuevo ilo','ilo');
+VALUES ('02','jade','chambilla','jade@','74020292','123456789','F',400,03,12,2003,'01','nuevo ilo','ilo');
+VALUES ('03','jade','chambilla','jade@','74020292','123456789','F',400,03,12,2003,'01','nuevo ilo','ilo');
+VALUES ('04','jade','chambilla','jade@','74020292','123456789','F',400,03,12,2003,'01','nuevo ilo','ilo');
+VALUES ('05','jade','chambilla','jade@','74020292','123456789','F',400,03,12,2003,'01','nuevo ilo','ilo');
+
+CREATE TABLE i_educativa(
+	id_i_educativa VARCHAR(10) PRIMARY KEY,
+	nombre VARCHAR (50),
+	director VARCHAR (50),
+	correo VARCHAR (50),
+	DNI VARCHAR (8),
+	telefono VARCHAR (9),
+	direccion VARCHAR(50),
+	nro_calle VARCHAR (10),
+	nom_calle VARCHAR (30),
+	provincia VARCHAR (20),
+	nivel_educativo VARCHAR (50),
+	descripcion TEXT,);
+	
+INSERT INTO i_educativa (id_i_educativa ,nombre,director,correo,DNI,telefono,direccion,nro_calle,nom_calle,provincia,nivel_educativo,descripcion) 
+VALUES ('01','conde vazquez','jade','jade@','74020292','123456789','01','nuevo ilo','ilo','primaria','sbkd');
+VALUES ('02','conde vazquez','jade','jade@','74020292','123456789','01','nuevo ilo','ilo','primaria','sbkd');
+VALUES ('03','conde vazquez','jade','jade@','74020292','123456789','01','nuevo ilo','ilo','primaria','sbkd');
+VALUES ('04','conde vazquez','jade','jade@','74020292','123456789','01','nuevo ilo','ilo','primaria','sbkd');
+VALUES ('05','conde vazquez','jade','jade@','74020292','123456789','01','nuevo ilo','ilo','primaria','sbkd');
+
+CREATE TABLE alumno (
+	id_alm VARCHAR(10) PRIMARY KEY,
+	nom_alm VARCHAR (50),
+	apellidos_completo VARCHAR (50),
+	DNI VARCHAR (8),
+	telefono VARCHAR (9),
+	direccion VARCHAR(50),
+	nro_calle VARCHAR (10),
+	nom_calle VARCHAR (30),
+	provincia VARCHAR (20),
+	sexo CHAR (1),
+	f_nacimiento DATE,
+	dia DATE,
+	mes DATE,
+	anio DATE);
+
+INSERT INTO alumno (id_alm,nom_alm,apellidos_completo,DNI,telefono,direccion,nro_calle,nom_calle,provincia,sexo,f_nacimiento,dia,mes,anio) 
+VALUES ('01','jade','chambilla','74020292','123456789','01','nuevo ilo','ilo','F',03,12,2003);
+VALUES ('02','jade','chambilla','74020292','123456789','01','nuevo ilo','ilo','F',03,12,2003);
+VALUES ('03','jade','chambilla','74020292','123456789','01','nuevo ilo','ilo','F',03,12,2003);
+VALUES ('04','jade','chambilla','74020292','123456789','01','nuevo ilo','ilo','F',03,12,2003);
+VALUES ('05','jade','chambilla','74020292','123456789','01','nuevo ilo','ilo','F',03,12,2003);
+
+CREATE TABLE secretaria (
+	id_secre VARCHAR(10) PRIMARY KEY,
+	nom_secre VARCHAR (50),
+	apellidos_completo VARCHAR (50),
+	DNI VARCHAR (8),
+	telefono VARCHAR (9),
+	direccion VARCHAR(50),
+	nro_calle VARCHAR (10),
+	nom_calle VARCHAR (30),
+	provincia VARCHAR (20),
+	sexo CHAR (1),
+	f_nacimiento DATE,
+	dia DATE,
+	mes DATE,
+	anio DATE);
+
+INSERT INTO secretaria (id_secre,nom_secre,apellidos_completo,DNI,telefono,direccion,nro_calle,nom_calle,provincia,sexo,f_nacimiento,dia,mes,anio) 
+VALUES ('01','jade','chambilla','74020292','123456789','01','nuevo ilo','ilo','F',03,12,2003);
+VALUES ('02','jade','chambilla','74020292','123456789','01','nuevo ilo','ilo','F',03,12,2003);
+VALUES ('03','jade','chambilla','74020292','123456789','01','nuevo ilo','ilo','F',03,12,2003);
+VALUES ('04','jade','chambilla','74020292','123456789','01','nuevo ilo','ilo','F',03,12,2003);
+VALUES ('05','jade','chambilla','74020292','123456789','01','nuevo ilo','ilo','F',03,12,2003);
+
+CREATE TABLE recurso_edu(
+	id_recurso_edu VARCHAR(10) PRIMARY KEY,
+	nro_computadoras NUMERIC(0,3),
+	nro_libros NUMERIC (0,3),
+	nro_estantes NUMERIC (0,3),
+	nro_documentos NUMERIC (0,5));
+
+INSERT INTO recurso_edu(id_recurso_edu,nro_computadoras,nro_libros,nro_estantes,nro_documentos) 
+VALUES ('01',5,16,7,20);
+VALUES ('02',5,16,7,20);
+VALUES ('03',5,16,7,20);
+VALUES ('04',5,16,7,20);
+VALUES ('05',5,16,7,20);
+
+CREATE TABLE recursos_humanos(
+	id_recursos_hum VARCHAR(10) PRIMARY KEY,
+	encargado VARCHAR (50),
+	revicion_quejas TEXT,
+	control_personal TEXT,
+	permisos TEXT,
+	tipo_cargo VARCHAR (50),	
+	correo VARCHAR (50),
+	telefono VARCHAR (9),
+	sexo CHAR (1),
+	remuneracion NUMERIC(2,4),
+	f_contratacion DATE.
+	estado_laboral VARCHAR (50),
+	f_nacimiento DATE,
+	dia DATE,
+	mes DATE,
+	anio DATE,
+	direccion VARCHAR(50),
+	nro_calle VARCHAR (10),
+	nom_calle VARCHAR (30),
+	provincia VARCHAR (20));
+	
+INSERT INTO recursos_humanos(id_recursos_hum,encargado,revicion_quejas,control_personal,permisos,tipo_cargo,correo,telefono,sexo,remuneracion,f_contratacion,estado_laboral,estado_laboral,f_nacimiento,dia,mes,anio,direccion,nro_calle,nom_calle,provincia) 
+VALUES ('01','jade','bkdas','gd','pasante','jade@','123456789','F',400.07,02,02,1993,'descanso',03,12,2003,'01','nuevo ilo','ilo');
+VALUES ('02','jade','bkdas','gd','pasante','jade@','123456789','F',400.07,02,02,1993,'descanso',03,12,2003,'01','nuevo ilo','ilo');
+VALUES ('03','jade','bkdas','gd','pasante','jade@','123456789','F',400.07,02,02,1993,'descanso',03,12,2003,'01','nuevo ilo','ilo');
+VALUES ('04','jade','bkdas','gd','pasante','jade@','123456789','F',400.07,02,02,1993,'descanso',03,12,2003,'01','nuevo ilo','ilo');
+VALUES ('05','jade','bkdas','gd','pasante','jade@','123456789','F',400.07,02,02,1993,'descanso',03,12,2003,'01','nuevo ilo','ilo');
+
+CREATE TABLE comite_ejecutivo (
+	id_comite_ejec VARCHAR(10) PRIMARY KEY,
+	nom_comite_ejec VARCHAR (50),
+	apellidos_completo VARCHAR (50),
+	f_nacimiento DATE,
+	dia DATE,
+	mes DATE,
+	anio DATE,
+	curriculum TEXT,
+	sexo CHAR (1),
+	remuneracion NUMERIC(2,4),
+	direccion VARCHAR(50),
+	nro_calle VARCHAR (10),
+	nom_calle VARCHAR (30),
+	provincia VARCHAR (20));
+	DNI VARCHAR (8),
+	telefono VARCHAR (9),
+	correo VARCHAR (50),
+
+INSERT INTO comite_ejecutivo (id_comite_ejec,nom_comite_ejec,apellidos_completo,f_nacimiento,dia,mes,anio,curriculum,sexo,remuneracion,direccion,nro_calle,nom_calle,provincia,DNI,telefono,correo) 
+VALUES ('01','jade','chambilla',03,12,2003,'fd',F,400,'01','nuevo ilo','ilo','74020292','123456789','jade@')
+VALUES ('02','jade','chambilla',03,12,2003,'fd',F,400,'01','nuevo ilo','ilo','74020292','123456789','jade@')
+VALUES ('03','jade','chambilla',03,12,2003,'fd',F,400,'01','nuevo ilo','ilo','74020292','123456789','jade@')
+VALUES ('04','jade','chambilla',03,12,2003,'fd',F,400,'01','nuevo ilo','ilo','74020292','123456789','jade@')
+VALUES ('05','jade','chambilla',03,12,2003,'fd',F,400,'01','nuevo ilo','ilo','74020292','123456789','jade@')
+
+create table auditorio (ID_AUDITORIO VARCHAR (10), NOMBRE VARCHAR (50), AFORO VARCHAR(25),EQUIPO_COMPUTO BOOLEAN, MOUSE BOOLEAN, COMPUTADORA BOOLEAN, TECLADO BOOLEAN , NRO_ASIENTOS VARCHAR (28), NRO_MESAS VARCHAR (20), CANION_COMPUTO BOOLEAN, PIZARRA BOOLEAN);
+
+select * from auditorio;
+
+insert into auditorio (ID_AUDITORIO, NOMBRE, AFORO, EQUIPO_COMPUTO, MOUSE, COMPUTADORA, TECLADO, NRO_ASIENTOS, NRO_MESAS, CANION_COMPUTO, PIZARRA) values ('1', 'AULA A_1', '25','T', 'T', 'T', 'T','26','2', 'T','T');
+insert into auditorio (ID_AUDITORIO, NOMBRE, AFORO, EQUIPO_COMPUTO, MOUSE, COMPUTADORA, TECLADO, NRO_ASIENTOS, NRO_MESAS, CANION_COMPUTO, PIZARRA) values ('2', 'AULA A_12', '25','T', 'T', 'T', 'F','28','3', 'F','F');
+insert into auditorio (ID_AUDITORIO, NOMBRE, AFORO, EQUIPO_COMPUTO, MOUSE, COMPUTADORA, TECLADO, NRO_ASIENTOS, NRO_MESAS, CANION_COMPUTO, PIZARRA) values ('3', 'AULA A_2', '25','T', 'T', 'T', 'T','26','3', 'T','F');
+insert into auditorio (ID_AUDITORIO, NOMBRE, AFORO, EQUIPO_COMPUTO, MOUSE, COMPUTADORA, TECLADO, NRO_ASIENTOS, NRO_MESAS, CANION_COMPUTO, PIZARRA) values ('4', 'AULA A_22', '25','F', 'T', 'T', 'T','27','15', 'T','T');
+insert into auditorio (ID_AUDITORIO, NOMBRE, AFORO, EQUIPO_COMPUTO, MOUSE, COMPUTADORA, TECLADO, NRO_ASIENTOS, NRO_MESAS, CANION_COMPUTO, PIZARRA) values ('5', 'AULA A_3', '25','F', 'T', 'F', 'F','28','7', 'T','T');
+
+
+create table sala_espera (ID_espera VARCHAR (10) PRIMARY KEY,NRO_ESPENDEDORES VARCHAR (5),TACHO_BASURA CHAR,AFORO VARCHAR (30), NRO_ASIENTOS VARCHAR (30), 
+NRO_TELEVISOR VARCHAR (5));
+
+select * from sala_espera;
+
+insert into sala_espera (ID_espera, NRO_ESPENDEDORES, TACHO_BASURA, AFORO, NRO_ASIENTOS, NRO_TELEVISOR) values ('123', '2', 'T', '25', '30', '2');
+insert into sala_espera (ID_espera, NRO_ESPENDEDORES, TACHO_BASURA, AFORO, NRO_ASIENTOS, NRO_TELEVISOR) values ('122', '1', 'T', '30', '30', '3');
+insert into sala_espera (ID_espera, NRO_ESPENDEDORES, TACHO_BASURA, AFORO, NRO_ASIENTOS, NRO_TELEVISOR) values ('124', '4', 'T', '28', '30', '2');
+insert into sala_espera (ID_espera, NRO_ESPENDEDORES, TACHO_BASURA, AFORO, NRO_ASIENTOS, NRO_TELEVISOR) values ('125', '3', 'T', '25', '30', '1');
+insert into sala_espera (ID_espera, NRO_ESPENDEDORES, TACHO_BASURA, AFORO, NRO_ASIENTOS, NRO_TELEVISOR) values ('126', '2', 'T', '25', '30', '2');
+
+
+create table area_recepcion (ID_RECEPCION VARCHAR (10) PRIMARY KEY, MESA BOOLEAN, SILLA BOOLEAN, MOUSE BOOLEAN, COMPUTADORA BOOLEAN, TECLADO BOOLEAN, AFORO VARCHAR (30),
+ CAMARA_SEGURIDAD BOOLEAN, ILUMINACION BOOLEAN, VENTILACION BOOLEAN);
+ 
+ select * from area_recepcion; 
+ 
+ 
+ insert into area_recepcion(ID_RECEPCION,MESA,SILLA,MOUSE,COMPUTADORA,TECLADO,AFORO,CAMARA_SEGURIDAD,ILUMINACION, VENTILACION)VALUES ('111','T','T','T','T','T','30','F','T','F');
+
+
+
+
+create table sala_directiva (ID_DIRECTIVA VARCHAR (10) PRIMARY KEY,REUNIONES VARCHAR (50) ,NRO_MESAS,AFORO NUMERIC (1,2), NRO_ASIENTOS, 
+EQUIPO_COMPUTO, CANION_MULTIMEDIA BOOLEAN, PIZARRA BOOLEAN);
+
+
+
+
+create table area_supervision (ID_AREASU VARCHAR (10) PRIMARY KEY, NOMBRE VARCHAR (50) ,UBICACION VARCHAR (50),AFORO NUMERIC (1,2), FUNCIONES TEXT, INFORMES TEXT, EQUIPO_COMPUTO);
+
+
+
+create table area_mantenimiento (ID_MANTE VARCHAR (10) PRIMARY KEY, NOMBRE VARCHAR (50) ,INVENTARIO TEXT ,AFORO NUMERIC (1,2), FUNCIONES TEXT, EQUIPO_COMPUTO);
+
+
+
+
+create table tecnicos_mantenimiento (ID_TEC VARCHAR (10) PRIMARY KEY, NOMBRE VARCHAR (50) ,SEXO CHAR, FECHA_NACIMIENTO, DIRECCION, CORREO_ELECTRONICO VARCHAR (50), TELEFONO VARCHAR(12), ESPECIALIDAD VARCHAR (30), ESTADO_LABORAL CHAR);
+
+
+
+create table incentivos (ID_INCEN VARCHAR (10) PRIMARY KEY, ENCARGADO VARCHAR (50) ,BECAS TEXT,CAPACITACION CHAR, PROMOCIONES TEXT, INFORMES TEXT, PROYECTOS TEXT, BONIFICACION FLOAT);
+
+
+create table horario (ID_HORARIO VARCHAR (10) PRIMARY KEY, TURNO CHAR ,TOTAL_HORAS TIME);
+
+
+
+create table comprobante_pago (ID_COMPROBANTE VARCHAR (10) PRIMARY KEY, NOMBRE VARCHAR (50) ,TIPO_PAGO VARCHAR (50), FECHA DATE, HORA TIME, MONTO_CANCELADO FLOAT, DESCRIPCION VARCHAR (30), RUT VARCHAR (20));
+
+create table enfermeria (ID_ENFERME VARCHAR (10) PRIMARY KEY, BOTIQUIN VARCHAR (50) ,ALMACEN VARCHAR (50),AFORO NUMERIC (1,2), NRO_CAMILLAS VARCHAR (20), NRO_SILLAS VARCHAR (20),NRO_ALMOHADAS VARCHAR (10), NRO_MANTAS VARCHAR (10),EXPEDIENTES TEXT, EQUIPO_COMPUTO);
+
+create table personal_limpieza (ID_PERLIM VARCHAR (10) PRIMARY KEY, NOMBRE VARCHAR (50) ,SEXO CHAR, FECHA_NACIMIENTO, DIRECCION, CORREO_ELECTRONICO VARCHAR (50), TELEFONO VARCHAR(12), CARGO VARCHAR (30), EPP VARCHAR(50));
+
+create table personal_vigilancia (ID_VIGI VARCHAR (10) PRIMARY KEY, NOMBRE VARCHAR (50) ,SEXO CHAR, FECHA_NACIMIENTO, DIRECCION, CORREO_ELECTRONICO VARCHAR (50), TELEFONO VARCHAR(12), CARGO VARCHAR (30), EPP VARCHAR(50, TURNO CHAR);
+
+create table tickets_atencion (ID_TICKET VARCHAR (10) PRIMARY KEY, ESTADO CHAR ,NUMERO NUMERIC (1,3), FECHA DATE, HORA TIME, DESCRIPCION VARCHAR (30));
+
+
